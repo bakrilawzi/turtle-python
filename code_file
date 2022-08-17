@@ -1,0 +1,27 @@
+import turtle
+from turtle import Turtle, Screen
+import heroes
+import random
+# colors= ["cornflower blue","red","blue","purple","black","yellow","green","orange red"]
+# size = [10,15,20,40,50,100,]
+directions = [0,90,120,180,270,360]
+tim = Turtle()
+tim.color("black")
+tim.speed(3)
+turtle.colormode(255)
+
+# print(heroes.gen())
+def random_number():
+    r = random.randint(0,255)
+    g = random.randint(0, 255)
+    b = random.randint(0, 255)
+    x = (r,g,b)
+    return x
+def draw_spiograph(siz_of_gap):
+    for _ in range(int(360/siz_of_gap)):
+      tim.speed(15)
+      tim.color(random_number())
+      tim.circle(100)
+      current_heading = tim.heading()
+      tim.setheading(current_heading + siz_of_gap)
+draw_spiograph(5)
