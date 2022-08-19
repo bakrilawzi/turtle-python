@@ -1,0 +1,44 @@
+# import colorgram
+import random
+import turtle as t
+# TODO-1 ; here is the way of extracting color from an image:
+# from extraction import Extraction
+# colors = colorgram.extract('turtle.jpg',30)
+# # print(colors)
+# list = []
+# for color in colors:
+#     # print(color)
+#     r = color.rgb.r
+#     g = color.rgb.g
+#     b = color.rgb.b
+#     new_color = (r,g,b)
+#     list.append(new_color)
+# print(list)
+# TODO -2 : HERE THE CODE START AND HOW TO DRAW A HERIS TURTLE
+color_list = [(245, 248, 253), (244, 235, 46), (196, 12, 34), (221, 159, 69), (43, 80, 178), (238, 39, 143), (40, 215, 68), (238, 229, 5), (23, 147, 26), (207, 74, 22), (202, 34, 91), (186, 16, 9), (19, 18, 42), (216, 141, 191), (57, 15, 10), (88, 8, 28), (227, 161, 9), (78, 212, 157), (67, 73, 221), (13, 95, 61), (78, 194, 225), (239, 158, 215), (94, 233, 204), (220, 76, 48), (15, 67, 46), (7, 226, 238)]
+tim = t.Turtle()
+screen = t.Screen()
+screen.colormode(255)
+tim.pencolor(255,0,0)
+tim.speed(6)
+# tim.setheading(225)
+# tim.fd(300)
+def heris(dot_count):
+    for set in range(1,dot_count):
+        tim.setheading(0)
+        tim.dot(10,random.choice(color_list))
+        tim.penup()
+        tim.fd(50)
+        tim.pendown()
+        if set % 10 == 0:
+            tim.setheading(90)
+            tim.penup()
+            tim.fd(50)
+            tim.pendown()
+            tim.setheading(180)
+            tim.penup()
+            tim.fd(500)
+            tim.pendown()
+            tim.setheading(0)
+
+heris(100)
