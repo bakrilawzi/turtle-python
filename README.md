@@ -1,5 +1,6 @@
 # turtle-python
 how to draw a spiograph using turtle python
+how to draw a heris turtle using python
 # first:
 gonna help you to learn how to generate a random color from rgb using a function
 # second:
